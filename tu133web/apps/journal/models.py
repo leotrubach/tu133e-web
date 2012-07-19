@@ -56,9 +56,7 @@ class LogEntry(models.Model):
     instructor = models.ForeignKey(User, verbose_name=_('instructor'))
     speedometer = models.CharField(max_length=20, 
                                    verbose_name=_('speedometer'))
-    loc_series = models.ForeignKey(LocSeries, 
-                                   verbose_name=_('locomotive series'))
-    loc_number = models.ForeignKey()
+    locomotive = models.ForeignKey(Locomotive, verbose_name=_('locomotive'))
 
     def __unicode__(self):
         pass
